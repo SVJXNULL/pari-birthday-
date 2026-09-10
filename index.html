@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PARI Birthday Archive</title>
+
+    <link rel="stylesheet" href="Pstyle.css">
+</head>
+
+<body>
+
+    <!-- INTRO -->
+
+    <section id="intro" class="screen active">
+
+        <div class="intro-content">
+
+            <p class="small-text">CLASSIFIED ARCHIVE</p>
+
+            <h1>PARI BIRTHDAY</h1>
+
+            <p id="typing-text"></p>
+
+            <button onclick="startArchive()">
+                ENTER ARCHIVE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ -->
+
+    <section id="quiz" class="screen">
+
+        <div class="container">
+
+            <p class="small-text">IDENTITY VERIFICATION</p>
+
+            <h2 id="question"></h2>
+
+            <div id="answers"></div>
+
+            <p id="quiz-feedback"></p>
+
+            <p id="progress"></p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORY ARCHIVE -->
+
+    <section id="memories" class="screen">
+
+        <div class="container">
+
+            <p class="small-text">ARCHIVE ACCESS GRANTED</p>
+
+            <h2>MEMORY ARCHIVE</h2>
+
+            <p class="subtitle">
+                A collection of highly questionable evidence.
+            </p>
+
+            <div id="memory-grid"></div>
+
+            <button onclick="openSecret()">
+                COMPLETE ARCHIVE
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SECRET FILE -->
+
+    <section id="secret" class="screen">
+
+        <div class="container">
+
+            <p class="small-text">SYSTEM ALERT</p>
+
+            <h2>ONE ADDITIONAL FILE DETECTED</h2>
+
+            <p>
+                FILE: FINAL_MESSAGE.txt
+            </p>
+
+            <p>
+                STATUS: ENCRYPTED
+            </p>
+
+            <button onclick="unlockSecret()">
+                UNLOCK FILE
+            </button>
+
+            <div id="secret-message"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL -->
+
+    <section id="final" class="screen">
+
+        <div class="final-message">
+
+            <p class="small-text">FILE DECRYPTED</p>
+
+            <h1>Happy Birthday PARIiiiiiiiiiiiiii.</h1>
+
+            <p>
+                <!-- YOUR PERSONAL MESSAGE GOES HERE -->
+                Some people deserve an entire archive.
+                Unfortunately, you're one of them FIRDAUS....
+            </p>
+
+            <p>
+                — from someone
+            </p>
+
+        </div>
+
+    </section>
+
+<div id="photo-modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeMemory()">×</span>
+
+        <img id="modal-image">
+
+        <h2 id="modal-title"></h2>
+
+        <p id="modal-text"></p>
+
+    </div>
+
+</div>
+    <script src="Pscript.js"></script>
+
+</body>
+
+</html>

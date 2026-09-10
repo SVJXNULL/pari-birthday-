@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #ff0000;
+    overflow-x: hidden;
+}
+
+
+/* ======================================
+   SCREENS
+====================================== */
+
+.screen {
+    min-height: 100vh;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* ======================================
+   INTRO
+====================================== */
+
+#intro {
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 700px;
+}
+
+.small-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(45px, 10vw, 100px);
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#typing-text {
+    min-height: 30px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+
+/* ======================================
+   BUTTONS
+====================================== */
+
+button {
+    background: white;
+    color: #ff0000;
+
+    border: none;
+
+    padding: 14px 25px;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #ff0000;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+
+/* ======================================
+   CONTAINER
+====================================== */
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.subtitle {
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+
+/* ======================================
+   QUIZ
+====================================== */
+
+#question {
+    margin: 30px auto;
+    max-width: 700px;
+
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+#answers {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+    max-width: 500px;
+
+    margin: auto;
+}
+
+.answer {
+    background: #151515;
+    color: rgb(255, 0, 0);
+
+    border: 1px solid #333;
+
+    padding: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    border-radius: 4px;
+}
+
+.answer:hover {
+    background: #252525;
+    transform: translateY(-2px);
+}
+
+#quiz-feedback {
+    margin-top: 25px;
+    min-height: 25px;
+
+    font-size: 16px;
+}
+
+#progress {
+    margin-top: 30px;
+    opacity: 0.5;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* ======================================
+   MEMORY ARCHIVE
+====================================== */
+
+#memory-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    margin: 40px 0;
+}
+
+.memory-card {
+    background: #151515;
+
+    border: 1px solid #333;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    border-radius: 4px;
+}
+
+.memory-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff0000;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin-bottom: 15px;
+
+    border-radius: 2px;
+}
+
+.memory-card h3 {
+    margin-bottom: 8px;
+}
+
+.memory-card p {
+    opacity: 0.6;
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ======================================
+   MEMORY MODAL
+====================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    z-index: 100;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 700px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 70vh;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+
+    border-radius: 4px;
+}
+
+.modal-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.close {
+    position: absolute;
+
+    right: -20px;
+    top: -40px;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    opacity: 0.7;
+
+    transition: 0.2s;
+}
+
+.close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* ======================================
+   SECRET
+====================================== */
+
+#secret-message {
+    margin-top: 30px;
+}
+
+#secret-message button {
+    margin-top: 20px;
+}
+
+
+/* ======================================
+   FINAL
+====================================== */
+
+#final {
+    text-align: center;
+}
+
+.final-message {
+    max-width: 700px;
+}
+
+.final-message p {
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    margin: 20px 0;
+}
+
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+
+    .screen {
+        padding: 20px;
+    }
+
+
+    h1 {
+        font-size: 48px;
+        letter-spacing: 3px;
+    }
+
+
+    h2 {
+        font-size: 30px;
+    }
+
+
+    #question {
+        font-size: 20px;
+    }
+
+
+    .answer {
+        padding: 16px;
+        font-size: 14px;
+    }
+
+
+    #memory-grid {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 12px;
+
+        margin-top: 25px;
+    }
+
+
+    .memory-card {
+        padding: 8px;
+    }
+
+
+    .memory-card img {
+        height: 180px;
+    }
+
+
+    .memory-card h3 {
+        font-size: 14px;
+    }
+
+
+    .memory-card p {
+        font-size: 12px;
+    }
+
+
+    .modal {
+        padding: 20px;
+    }
+
+
+    .modal-content img {
+        max-height: 65vh;
+    }
+
+
+    .close {
+        right: 0;
+        top: -45px;
+    }
+
+
+    .final-message p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* ======================================
+   SMALL PHONES
+====================================== */
+
+@media (max-width: 380px) {
+
+    #memory-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .memory-card img {
+        height: 230px;
+    }
+
+}
